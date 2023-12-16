@@ -1,0 +1,367 @@
+/*Importação da fonte e diferentes pesos utilizados*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/*Criação das variáveis do CSS*/
+:root{
+    --cor-primaria: #FFFFFF;
+    --cor-secundaria: #667085;
+    --cor-terciaria: #8E2424; 
+    --cor-quartenaria: #000000;
+    --cor-fundo-opaco: rgb(142, 36, 36,0.05);
+    --cor-borda: #EAECF0;
+    --cor-borda-input: #D0D5DD;
+    --cor-texto-direitos: #98A2B3;
+    --cor-texto-colaborador: #101828;
+
+    --fonte-principal: 'Inter', sans-serif;
+
+    --peso-fonte-regular: 400;
+    --peso-fonte-medium: 500;
+    --peso-fonte-semi-bold: 600;
+}
+
+/*Seletor mais generalizado*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+/*Estilização do Header da página que seria uma barra de navegação*/
+.cabecalho__navegacao{
+    padding: 1.5% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho__navegacao__logo{
+    width: auto;
+}
+
+.cabecalho__navegacao__links{
+    margin: 0 25% 0 8% ;
+    display: flex;
+    gap: 32px;
+}
+
+.cabecalho__navegacao__links__link{
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: var(--peso-fonte-medium);
+    font-size: 1rem;
+}
+
+.cabecalho__navegacao__botoes{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cabecalho__navegacao__botoes__link{
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: var(--peso-fonte-medium);
+    font-size: 1rem;
+    margin: 0 7%;
+}
+
+.cabecalho__navegacao__botoes__botao{
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-terciaria);
+    text-decoration: none;
+    padding: 7% 14%;
+    border-radius: 8px;
+    color: var(--cor-primaria);
+    font-weight: var(--peso-fonte-medium);
+    font-size: 1rem;
+}
+
+.link:hover{
+    color: var(--cor-terciaria);
+}
+
+
+/*Estlização da primeira section, nomeada como cabeçalho*/
+.conteudo-principal__cabecalho{
+    width: auto;
+    padding: 6% 1% 10% 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.conteudo-principal__cabecalho__{
+    font-size: 1rem;
+    font-weight: var(--peso-fonte-semi-bold);
+    color: var(--cor-terciaria);
+}
+
+.conteudo-principal__cabecalho__titulo{
+    font-size: 3rem;
+    font-weight: var(--peso-fonte-semi-bold);
+    color: var(--cor-quartenaria);
+}
+
+.conteudo-principal__cabecalho__conteudo{
+    width: 45%;
+    font-size: 1.25rem;
+    font-weight: var(--peso-fonte-regular);
+    color: var(--cor-secundaria);
+    text-align: center;
+}
+
+/*Estlização da segunda section, nomeada como métricas*/
+.conteudo-principal__metricas-container{
+    width: auto;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 32px;
+    padding: 0 10% 6% 10%;
+}
+
+.conteudo-principal__metricas-container__metrica{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 3rem;
+}
+
+.conteudo-principal__metricas-container__metrica__titulo{
+    font-weight: var(--peso-fonte-semi-bold);
+    font-size: 3.75rem;
+    color: var(--cor-terciaria);
+}
+
+.conteudo-principal__metricas-container__metrica__conteudos{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.conteudo-principal__metricas-container__metrica__conteudos__subtitulo{
+    font-weight: var(--peso-fonte-medium);
+    font-size: 1.125rem;
+    color: var(--cor-quartenaria);
+}
+
+.conteudo-principal__metricas-container__metrica__conteudos__paragrafo{
+    width: 280px;
+    font-weight: var(--peso-fonte-regular);
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+}
+
+/*Estlização da terceira section, nomeada como talentos*/
+.conteudo-principal__talentos{
+    text-align: center;
+    margin: 6rem 3rem 4rem 3rem;
+}
+
+.conteudo-principal__talentos__conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.conteudo-principal__talentos__conteudo__{
+    display: flex;
+    width: max-content;
+    color: var(--cor-terciaria);
+    font-size: 0.875rem;
+    font-weight: var(--peso-fonte-medium);
+    background-color: var(--cor-fundo-opaco);
+    border: 1px solid var(--cor-fundo-opaco);
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.conteudo-principal__talentos__conteudo__titulo{
+    color: var(--cor-quartenaria);
+    font-size: 2.25rem;
+    font-weight: var(--peso-fonte-semi-bold);
+    margin-bottom: 0.25rem;
+}
+
+.conteudo-principal__talentos__conteudo__paragrafo{
+    color: var(--cor-secundaria);
+    font-size: 1.3rem;
+    font-weight: var(--peso-fonte-regular);
+}
+
+.conteudo-principal__talentos__imagem{
+    width: 90%;
+}
+
+/*Estlização da quarta section, nomeada como vagas*/
+.conteudo-principal__vagas{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.conteudo-principal__vagas__areas{
+    font-size: 1.25rem;
+    font-weight: var(--peso-fonte-medium);
+    color: var(--cor-quartenaria);
+}
+
+.conteudo-principal__vagas__listas{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+}
+
+.conteudo-principal__vagas__listas__item{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 1rem;
+}
+
+.conteudo-principal__vagas__listas__item__titulo{
+    font-size: 1.125rem;
+    font-weight: var(--peso-fonte-medium);
+    color: var(--cor-quartenaria);
+}
+
+.conteudo-principal__vagas__listas__item__conteudo{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+.conteudo-principal__vagas__listas__item__conteudo__info{
+    font-size: 1rem;
+    font-weight: var(--peso-fonte-medium);
+    color: var(--cor-secundaria);
+}
+
+/*Estlização da quarta section, nomeada como vagas*/
+.conteudo-principal__colaboradores__container{
+    box-sizing: border-box;
+    width: 85%;
+    margin: 0 7.5% 6rem 7.5% ;
+    padding: 4rem;
+    background-color: var(--cor-fundo-opaco);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.conteudo-principal__colaboradores__container__titulo{
+    color: var(--cor-terciaria);
+    font-size: 0.875rem;
+    font-weight: var(--peso-fonte-semi-bold);
+    margin-bottom: 1rem;
+}
+
+.conteudo-principal__colaboradores__container__comentario{
+    color: var(--cor-texto-colaborador);
+    font-size: 2.25rem;
+    font-weight: var(--peso-fonte-medium);
+    width: 75%;
+}
+
+.conteudo-principal__colaboradores__container__avatar{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.conteudo-principal__colaboradores__container__nome-colaborador{
+    color: var(--cor-texto-colaborador);
+    font-size: 1rem;
+    font-weight: var(--peso-fonte-medium);
+    margin-bottom: 0.25rem;
+
+}
+
+.conteudo-principal__colaboradores__container__cargo{
+    color: var(--cor-secundaria);
+    font-size:0.875rem;
+    font-weight: var(--peso-fonte-regular);
+}
+
+/*Estlização do rodapé*/
+.rodape{
+    text-align: center;
+    margin: 5rem auto;
+}
+
+.rodape__container{
+    margin: 6rem 0 2rem 0;
+}
+
+.rodape__container__titulo{
+    font-size: 2.25rem;
+    font-weight: var(--peso-fonte-semi-bold);
+    margin-bottom: 1.25rem;
+}
+
+.rodape__container__paragrafo{
+    color: var(--cor-secundaria);
+    font-size: 1.25rem;
+    font-weight: var(--peso-fonte-regular);
+    margin-bottom: 2.5rem;
+}
+
+.rodape__container__cadastro{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.rodape__container__cadastro__e-mail{
+    box-sizing: border-box;
+    width: 22.5rem;
+    height: 3rem;
+    padding: 0.75rem 0.875rem;
+    border: 1px solid var(--cor-borda-input);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: var(--peso-fonte-regular);
+}
+
+.rodape__container__cadastro__botao{
+    width: 7.25rem;
+    height: 3rem;
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-terciaria);
+    border-radius: 8px;
+    color: var(--cor-primaria);
+    font-weight: var(--peso-fonte-medium);
+    font-size: 1rem;
+}
+
+.botao:hover{
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    font-weight: var(--peso-fonte-semi-bold);
+}
+
+.rodape__direitos{
+    margin-bottom: 6rem;
+    color: var(--cor-texto-direitos);
+    font-size: 16px;
+    font-weight: var(--peso-fonte-regular);
+}
